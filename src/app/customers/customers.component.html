@@ -1,0 +1,17 @@
+<p>
+  customers works!
+</p>
+
+<div *ngFor='let customer of response'>
+  <input type='number'value={{customer.tickets}}/>
+  <span>{{customer.customerName}}</span>
+  <span>{{customer.customerLastName}}</span>
+  <span class="expense">{{customer.expense}}</span>
+  <button (click)='showDetails()'>More Details</button>
+  <div *ngIf='isCollapsed'>
+    <input type='number'value={{customer.tickets}}/>
+    <span>{{customer.customerName}}</span>
+    <span>{{customer.customerLastName}}</span>
+    <span class="expense">{{customer.expense}}</span>
+  </div>
+</div>
