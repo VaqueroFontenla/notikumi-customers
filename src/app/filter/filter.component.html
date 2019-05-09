@@ -1,5 +1,15 @@
-<p>
-  filter works!
-</p>
-<input type="text" class="input">
-<button (click)='search()' class='searchButton'>Search</button>
+<mat-form-field class = "">
+<input type="text"
+       class="input"
+       [(ngModel)]="festivalName"
+       placeholder = "Write festival name"
+       matInput
+       [formControl] = "myControl"
+       [matAutocomplete] = "auto">
+<mat-autocomplete #auto = "matAutocomplete">
+         <mat-option *ngFor = "let festival of festivalsFiltered" [value] = "festival.festival">
+            {{festival.festival}}
+         </mat-option>
+      </mat-autocomplete>
+         </mat-form-field>
+<app-button (submit)="search($event)">Search</app-button>

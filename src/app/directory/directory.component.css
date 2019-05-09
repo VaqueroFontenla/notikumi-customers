@@ -1,4 +1,7 @@
 .directory {
   min-width: 600px;
   border: 3px solid #D3D3D3;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { compileNgModule } from '@angular/compiler';
+
 
 @Component ({
   selector: 'app-directory',
@@ -10,8 +10,15 @@ import { compileNgModule } from '@angular/compiler';
 export class DirectoryComponent implements OnInit {
 
   title = 'Customer Directory';
+  festivals: any;
+  //response: any;
 
-  constructor() { }
+  constructor() {
+ }
+
+ getFestivalsData(festivals){
+   this.festivals = festivals
+ }
 
   ngOnInit() {
   }

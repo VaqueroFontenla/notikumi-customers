@@ -1,5 +1,9 @@
 <div class='directory'>
-  <h1 class='tittle'>{{title}}</h1>
-  <app-filter>filter</app-filter>
-  <app-customers>cultomers</app-customers>
+  <h1 class='title'>{{title}}</h1>
+  <app-filter (getFestivalsData)="getFestivalsData($event)"
+              (getResponseData)="getResponseData($event)"
+              >
+  </app-filter>
+  <app-customers [festivals]="festivals">
+  </app-customers>
 </div>

@@ -20,3 +20,6 @@ body {
         linear-gradient(to top right, blue, transparent);
     background-blend-mode: screen;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

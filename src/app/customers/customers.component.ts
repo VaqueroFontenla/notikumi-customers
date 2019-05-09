@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ServicesService } from '../services.service';
-import { HttpClient} from '@angular/common/http';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { DetailsComponent } from '../details/details.component';
 
 
 @Component({
@@ -9,25 +8,17 @@ import { HttpClient} from '@angular/common/http';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent implements OnInit {
-  response : any;
-  isCollapsed : boolean = false
+  @Input('festivals') festivals: any;
+  //@Input('response') response : any;
 
-  constructor(private svc: ServicesService) {
+
+  constructor() {
    }
 
-  showData () {
-    this.svc.getData()
-      .subscribe((response)=> {
-        this.response = response
-        console.log(this.response);
-      })
-   }
-   showDetails(){
-     this.isCollapsed = !this.isCollapsed
-   }
+
+
 
   ngOnInit() {
-    this.showData();
 
   }
 

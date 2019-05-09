@@ -1,0 +1,6 @@
+<button (click)='showDetails()'>More Details</button>
+<div *ngIf='isCollapsed'>
+  <span>{{customer.customerName}}</span>
+  <span>{{customer.customerLastName}}</span>
+  <span class="expense">{{customer.expense}}</span>
+</div>
