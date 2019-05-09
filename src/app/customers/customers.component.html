@@ -1,8 +1,11 @@
-<div *ngFor='let customer of festivals' class='customers'>
-  <input type='number'value={{customer.tickets}}/>
+<div class='customers'>
+<div *ngFor='let customer of festivals' class='customer'>
+  <input type='number'value={{customer.tickets}} class='quantity'/>
+  <div class='customer_name'>
   <span>{{customer.customerName}}</span>
   <span>{{customer.customerLastName}}</span>
   <span class="expense">{{customer.expense}}</span>
   <app-details [customer]='customer'></app-details>
-
+  </div>
+</div>
 </div>

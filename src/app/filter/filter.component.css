@@ -1,7 +1,8 @@
-.input {
+.inputContainer {
   display: flex;
+  justify-content: flex-start;
 }
 
-.searchButton {
-  height: 500px;
+.mat-autocomplete-panel {
+  background-color: green;
 }

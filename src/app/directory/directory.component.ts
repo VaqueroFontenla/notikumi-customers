@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component ({
@@ -7,20 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directory.component.css']
 })
 
-export class DirectoryComponent implements OnInit {
-
-  title = 'Customer Directory';
+export class DirectoryComponent{
   festivals: any;
-  //response: any;
-
   constructor() {
  }
-
  getFestivalsData(festivals){
    this.festivals = festivals
  }
-
-  ngOnInit() {
-  }
-
 }

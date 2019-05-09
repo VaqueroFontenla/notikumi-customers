@@ -9,10 +9,10 @@ import { DirectoryComponent } from './directory/directory.component';
 import { FilterComponent } from './filter/filter.component';
 import { CustomersComponent } from './customers/customers.component';
 import { ServicesService } from './services.service';
-import { OptionComponent } from './option/option.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './button/button.component';
 import { DetailsComponent } from './details/details.component';
+import { BackButtonComponent } from './back-button/back-button.component';
 
 
 @NgModule({
@@ -21,9 +21,9 @@ import { DetailsComponent } from './details/details.component';
     DirectoryComponent,
     FilterComponent,
     CustomersComponent,
-    OptionComponent,
     ButtonComponent,
-    DetailsComponent
+    DetailsComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

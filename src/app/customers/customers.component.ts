@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { DetailsComponent } from '../details/details.component';
 
 
@@ -7,19 +7,9 @@ import { DetailsComponent } from '../details/details.component';
   templateUrl: './customers.component.html',
   styleUrls: ['./customers.component.css']
 })
-export class CustomersComponent implements OnInit {
+export class CustomersComponent{
   @Input('festivals') festivals: any;
-  //@Input('response') response : any;
-
 
   constructor() {
    }
-
-
-
-
-  ngOnInit() {
-
-  }
-
 }

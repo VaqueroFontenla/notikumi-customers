@@ -1,4 +1,5 @@
-<mat-form-field class = "">
+<div class = "inputContainer">
+<mat-form-field class = "input">
 <input type="text"
        class="input"
        [(ngModel)]="festivalName"
@@ -6,10 +7,11 @@
        matInput
        [formControl] = "myControl"
        [matAutocomplete] = "auto">
-<mat-autocomplete #auto = "matAutocomplete">
+<mat-autocomplete #auto = "matAutocomplete" class="autocompleteContainer">
          <mat-option *ngFor = "let festival of festivalsFiltered" [value] = "festival.festival">
             {{festival.festival}}
          </mat-option>
       </mat-autocomplete>
          </mat-form-field>
 <app-button (submit)="search($event)">Search</app-button>
+</div>
