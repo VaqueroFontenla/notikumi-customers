@@ -1,8 +1,10 @@
 .inputContainer {
+  padding: 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
-.mat-autocomplete-panel {
-  background-color: green;
+.mat-form-field {
+  display: block;
+  flex-grow: 1;
 }

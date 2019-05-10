@@ -1,17 +1,17 @@
 <div class = "inputContainer">
-<mat-form-field class = "input">
-<input type="text"
-       class="input"
-       [(ngModel)]="festivalName"
-       placeholder = "Write festival name"
-       matInput
-       [formControl] = "myControl"
-       [matAutocomplete] = "auto">
-<mat-autocomplete #auto = "matAutocomplete" class="autocompleteContainer">
-         <mat-option *ngFor = "let festival of festivalsFiltered" [value] = "festival.festival">
-            {{festival.festival}}
-         </mat-option>
-      </mat-autocomplete>
-         </mat-form-field>
-<app-button (submit)="search($event)">Search</app-button>
+  <mat-form-field class = "input">
+    <input type="text"
+           class="input"
+           [(ngModel)]="festivalName"
+           placeholder = "Write festival name"
+           matInput
+           [formControl] = "myControl"
+           [matAutocomplete] = "auto">
+    <mat-autocomplete #auto = "matAutocomplete" class="autocompleteContainer">
+      <mat-option *ngFor = "let festival of festivalsFiltered" [value] = "festival.festival">
+        {{festival.festival}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <app-button (submit)="search($event)">Search</app-button>
 </div>

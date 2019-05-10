@@ -1,11 +1,27 @@
 <div class='customers'>
-<div *ngFor='let customer of festivals' class='customer'>
-  <input type='number'value={{customer.tickets}} class='quantity'/>
-  <div class='customer_name'>
-  <span>{{customer.customerName}}</span>
-  <span>{{customer.customerLastName}}</span>
-  <span class="expense">{{customer.expense}}</span>
-  <app-details [customer]='customer'></app-details>
-  </div>
-</div>
+  <ul class="customers_items">
+    <li class="customers_item">Tickets</li>
+    <li class="customers_item">Name</li>
+    <li class="customers_item">Total</li>
+  </ul>
+  <hr>
+  <ul class="customers_list">
+    <li *ngFor='let customer of festivals' class='customers_customer'>
+      <div class='customers_customer-container'>
+        <input type='number'value={{customer.tickets}} class='customers_customer-tickets'/>
+        <div class='customers_customer-name'>
+          <span>{{customer.customerName}}</span>
+          <span>&nbsp;{{customer.customerLastName}}</span>
+        </div>
+        <div class='customers_customer-expense'>
+          <span>{{customer.expense}}</span>
+          <span>€</span>
+        </div>
+        <app-details (submitDet)="handleSubmitDet($event)"style="display:flex;justify-content:center;align-items:center">
+        </app-details>
+      </div>
+      <app-details-description [customer]='customer' [isCollapsed]='isCollapsed'>
+      </app-details-description>
+    </li>
+  </ul>
 </div>

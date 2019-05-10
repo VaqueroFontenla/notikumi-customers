@@ -1,21 +1,61 @@
 .customers {
-  overflow-y: scroll;
-  border: 3px solid #D3D3D3;
-  max-height: 50vh
 }
-.quantity {
+.customers_items {
+  display: grid;
+  grid-template-columns: 70px 200px 1fr 1fr;
+  grid-column-gap: 15px;
+}
+
+.customers_item {
+  color: #007bff;
+  text-decoration: none;
+  list-style: none;
+}
+
+.customers_list {
+  overflow-y: scroll;
+  list-style-type: none;
+  max-height: 50vh;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.customers_list .customers_customer:nth-child(even) {
+  background-color: #D3D3D3;
+}
+
+.customers_customer {
+  border-bottom: #D3D3D3;
+  padding: 1%
+}
+
+.customers_customer-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 70px 200px 1fr 1fr;
+  grid-column-gap: 15px;
+}
+.customers_customer-tickets {
   display: flex;
   width: 40px;
   height: 40px;
   line-height: 40px;
   font-size: 20px;
-  color: $colorBlue;
+  color: #007bff;
   text-align: center;
   margin-right: 20px;
 }
-.customer{
+
+.customers_customer-name {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 700;
 }
-.customer_name {
+
+.customers_customer-expense {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #478e2b;
   font-weight: 700;
 }

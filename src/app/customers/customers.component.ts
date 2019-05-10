@@ -8,8 +8,12 @@ import { DetailsComponent } from '../details/details.component';
   styleUrls: ['./customers.component.css']
 })
 export class CustomersComponent{
+  isCollapsed : boolean = false
   @Input('festivals') festivals: any;
 
   constructor() {
    }
+  handleSubmitDet (event) {
+    this.isCollapsed = !this.isCollapsed ;
+  }
 }

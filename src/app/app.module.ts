@@ -13,6 +13,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './button/button.component';
 import { DetailsComponent } from './details/details.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { DetailsDescriptionComponent } from './details-description/details-description.component';
+import { StatisticComponent } from './statistic/statistic.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { BackButtonComponent } from './back-button/back-button.component';
     CustomersComponent,
     ButtonComponent,
     DetailsComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    DetailsDescriptionComponent,
+    StatisticComponent
   ],
   imports: [
     BrowserModule,

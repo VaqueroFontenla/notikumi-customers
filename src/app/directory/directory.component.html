@@ -1,8 +1,9 @@
 <div class='directory'>
   <app-filter (getFestivalsData)="getFestivalsData($event)"
-              (getResponseData)="getResponseData($event)"
-              >
-  </app-filter>
-  <app-customers [festivals]="festivals">
-  </app-customers>
+  (getResponseData)="getResponseData($event)"
+  >
+</app-filter>
+<app-customers [festivals]="festivals">
+</app-customers>
+<app-statistic [festivals]="festivals"></app-statistic>
 </div>

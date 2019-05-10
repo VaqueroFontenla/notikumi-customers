@@ -9,15 +9,10 @@
 
 body {
     font-family: 'Roboto', serif;
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background:
-        linear-gradient(red, transparent),
-        linear-gradient(to top left, lime, transparent),
-        linear-gradient(to top right, blue, transparent);
+    background: linear-gradient(-45deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 50%);
     background-blend-mode: screen;
 }
 
