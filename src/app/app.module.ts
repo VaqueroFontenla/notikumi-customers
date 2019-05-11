@@ -14,7 +14,7 @@ import { ButtonComponent } from './button/button.component';
 import { DetailsComponent } from './details/details.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { DetailsDescriptionComponent } from './details-description/details-description.component';
-import { StatisticComponent } from './statistic/statistic.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { StatisticComponent } from './statistic/statistic.component';
     DetailsComponent,
     BackButtonComponent,
     DetailsDescriptionComponent,
-    StatisticComponent
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,

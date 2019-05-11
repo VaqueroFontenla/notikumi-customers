@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { ServicesService } from '../services.service';
 import { FormControl } from "@angular/forms";
 
@@ -7,20 +7,19 @@ import { FormControl } from "@angular/forms";
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.css']
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent {
   @Output('getFestivalsData') sendData: EventEmitter<any> = new EventEmitter<any>();
+  @Output('getFestivalsTickets') sendTickets: EventEmitter<number> = new EventEmitter<number>();
 
   festivalName = '' ;
   myControl = new FormControl();
   festivals : any;
   festivalsFiltered : any;
-
-
+  totalTickets : number;
 
   constructor(private svc: ServicesService) {
     this.loadFestivals();
    }
-
   loadFestivals() {
     this.svc.getData()
       .subscribe((festivals)=> {
@@ -28,17 +27,13 @@ export class FilterComponent implements OnInit {
         this.sendData.emit(festivals);
         this.festivalsFiltered = this.removeDuplicates(this.festivals,'festival');
       });
-
   }
-
-  ngOnInit() {
-  }
-
   search(){
     let festivals = this.festivals.filter((festival)=> festival.festival === this.festivalName);
+    let totalTickets = festivals.reduce((sum, value) => ( sum + value.tickets ), 0);
     this.sendData.emit(festivals);
+    this.sendTickets.emit(totalTickets);
   }
-
   removeDuplicates(arr, prop){
     let newArr = [];
     let lookup  = {};
@@ -50,5 +45,4 @@ export class FilterComponent implements OnInit {
      }
      return newArr;
   }
-
 }

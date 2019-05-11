@@ -1,6 +1,4 @@
 import { Component, Input} from '@angular/core';
-import { DetailsComponent } from '../details/details.component';
-
 
 @Component({
   selector: 'app-customers',

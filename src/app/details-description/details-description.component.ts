@@ -9,6 +9,5 @@ export class DetailsDescriptionComponent  {
   @Input ('isCollapsed') isCollapsed: boolean;
   @Input('customer') customer: any;
   constructor() {
-    console.log(this.customer)
   }
 }
