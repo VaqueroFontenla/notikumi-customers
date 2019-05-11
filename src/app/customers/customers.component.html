@@ -6,7 +6,7 @@
   </ul>
   <hr>
   <ul class="customers_list">
-    <li *ngFor='let customer of festivals; index as i; trackBy:trackByFn' class='customers_customer'>
+    <li *ngFor='let customer of festivals; index as i' class='customers_customer'>
       <div class='customers_customer-container'>
         <input type='number'value={{customer.tickets}} class='customers_customer-tickets'/>
         <div class='customers_customer-name'>

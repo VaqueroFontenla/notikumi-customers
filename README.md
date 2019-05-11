@@ -12,7 +12,7 @@ You use the Angular CLI to create projects, generate application and library cod
 
 `npm install -g @angular/cli`
 
-##Cloning this repository
+## Cloning this repository
 
 `git clone https://github.com/VaqueroFontenla/notikumi-customers.git`
 
@@ -24,7 +24,7 @@ You use the Angular CLI to create projects, generate application and library cod
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 
-ENJOY YOURSEL!!!!
+**ENJOY YOURSEL!!!!**
 
 ## Resources
 https://netbasal.com/advanced-angular-implementing-a-reusable-autocomplete-component-9908c2f04f5
