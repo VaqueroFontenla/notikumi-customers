@@ -10,12 +10,14 @@ import { FormControl } from "@angular/forms";
 export class FilterComponent {
   @Output('getFestivalsData') sendData: EventEmitter<any> = new EventEmitter<any>();
   @Output('getFestivalsTickets') sendTickets: EventEmitter<number> = new EventEmitter<number>();
+  @Output('getFestivalsExpense') sendExpense: EventEmitter<number> = new EventEmitter<number>();
 
   festivalName = '' ;
   myControl = new FormControl();
   festivals : any;
   festivalsFiltered : any;
   totalTickets : number;
+  totalExpense : number;
 
   constructor(private svc: ServicesService) {
     this.loadFestivals();
@@ -31,8 +33,10 @@ export class FilterComponent {
   search(){
     let festivals = this.festivals.filter((festival)=> festival.festival === this.festivalName);
     let totalTickets = festivals.reduce((sum, value) => ( sum + value.tickets ), 0);
+    let totalExpense = festivals.reduce((sum, value) => ( sum + value.expense ), 0);
     this.sendData.emit(festivals);
     this.sendTickets.emit(totalTickets);
+    this.sendExpense.emit(totalExpense);
   }
   removeDuplicates(arr, prop){
     let newArr = [];

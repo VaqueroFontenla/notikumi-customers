@@ -1,2 +1,10 @@
-
-<span>{{totalTickets}}</span>
+<div class="statistics">
+  <div class="statistics_item">
+    <span class="value">{{totalTickets}}</span>
+    <span *ngIf= 'totalTickets'class="item">tickets</span>
+  </div>
+  <div class="statistics_item">
+    <span class="value">{{totalExpense}}</span>
+    <span *ngIf= 'totalExpense' class="item">€</span>
+  </div>
+</div>

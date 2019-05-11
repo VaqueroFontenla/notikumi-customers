@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class DetailsDescriptionComponent  {
   @Input ('isCollapsed') isCollapsed: boolean;
-  @Input('customer') customer: any;
+  @Input ('customer') customer: any;
+  @Input('customerToOpen') customerToOpen: number;
   constructor() {
   }
 }

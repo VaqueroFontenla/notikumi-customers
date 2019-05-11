@@ -1,5 +1,9 @@
 <div class='directory'>
-  <app-filter (getFestivalsData)="getFestivalsData($event)" (getFestivalsTickets)="getFestivalsTickets($event)"></app-filter>
+  <app-filter (getFestivalsData)="getFestivalsData($event)"
+              (getFestivalsTickets)="getFestivalsTickets($event)"
+              (getFestivalsExpense)="getFestivalsExpense($event)"
+              >
+  </app-filter>
   <app-customers [festivals]="festivals"></app-customers>
-  <app-statistics [totalTickets]="totalTickets"></app-statistics>
+  <app-statistics [totalTickets]="totalTickets" [totalExpense]="totalExpense"></app-statistics>
 </div>

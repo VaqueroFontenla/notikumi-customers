@@ -7,9 +7,7 @@ import { Component, Input} from '@angular/core';
 })
 export class StatisticsComponent {
   @Input('totalTickets') totalTickets: number;
-
-
+  @Input('totalExpense') totalExpense: number;
   constructor() {
-}
-
+  }
 }

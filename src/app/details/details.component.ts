@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-details',
@@ -6,10 +6,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
+  @Input() customer: any;
 
   @Output('submitDet') submitDet: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
-  showDetails(){
-    this.submitDet.emit(event)
+  showDetails() {
+    this.submitDet.emit(this.customer);
   }
 }

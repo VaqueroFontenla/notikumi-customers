@@ -7,11 +7,13 @@ import { Component, Input} from '@angular/core';
 })
 export class CustomersComponent{
   isCollapsed : boolean = false
+  customerToOpen: number;
   @Input('festivals') festivals: any;
 
   constructor() {
    }
   handleSubmitDet (event) {
+    this.customerToOpen = event;
     this.isCollapsed = !this.isCollapsed ;
   }
 }

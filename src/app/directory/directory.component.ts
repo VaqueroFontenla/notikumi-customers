@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 @Component ({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
@@ -10,6 +9,7 @@ import { Component } from '@angular/core';
 export class DirectoryComponent{
   festivals: any;
   totalTickets: number;
+  totalExpense: number;
   constructor() {
  }
  getFestivalsData(festivals){
@@ -17,5 +17,8 @@ export class DirectoryComponent{
  }
  getFestivalsTickets(totalTickets){
    this.totalTickets = totalTickets
+ }
+ getFestivalsExpense(totalExpense){
+   this.totalExpense = totalExpense
  }
 }
